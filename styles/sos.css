@@ -1,0 +1,42 @@
+/* Variables */
+:root {
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Raleway', Helvetica, sans-serif;
+    --primary-color: #121212;
+    --white: #ffffff;
+    --green: #28d866;
+    --accent2-color: #303232;
+}
+/* We'll start with the header */
+.logo img{
+    float: left;
+    height: 100px;
+}
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: var(--green);
+    height: 100px;
+}
+.fingers a{
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading-font);
+}
+.fingers a:hover {
+    text-decoration: underline;
+}
+/* Now I'll address the main section */
+body { 
+    margin: 0;
+}
+main {
+    min-height: 100px;
+}
+
+/* And lastly, the footer */
+footer {
+    background-color: var(--green);
+    min-height: 100px;
+}
