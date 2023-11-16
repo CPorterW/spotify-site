@@ -1,42 +1,107 @@
 /* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@530&display=swap');
+
 :root {
-    --heading-font: 'Raleway', sans-serif;
-    --paragraph-font: 'Raleway', Helvetica, sans-serif;
-    --primary-color: #121212;
-    --white: #ffffff;
-    --green: #28d866;
-    --accent2-color: #303232;
+  --heading-font: 'Raleway', sans-serif;
+  --paragraph-font: 'Raleway', Helvetica, sans-serif;
+
+  --primary-color: #121212;
+  --secondary-color: #ffffff;
+  --accent1-color: #28d866;
+  --accent2-color: #303232;
+  --accent3-color: #1fdf64;
+
+  --headline-color-on-white: var(--primary-color);  /* headlines on a white background */ 
+  --headline-color-on-color: var(--secondary-color); /* headlines on a colored background */ 
+  --paragraph-color-on-white: var(--primary-color); /* paragraph text on a white background */ 
+  --paragraph-color-on-color: var(--secondary-color); /* paragraph text on a colored background */ 
+  --paragraph-background-color: var(--accent2-color);
+  --nav-link-color: #a7a7a7;
+  --nav-background-color: #121212;
+  --nav-hover-link-color: var(--secondary-color);
+  --nav-hover-background-color: #121212;
 }
+
 /* We'll start with the header */
 .logo img{
     float: left;
     height: 100px;
 }
 header {
+    /* padding: 25px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background-color: var(--green);
-    height: 100px;
+    grid-template-columns: 150px auto; */
+    background-color: var(--accent1-color);
+    height: 110px;
+    text-align: center;
 }
-.fingers a{
-    color: var(--white);
-    text-decoration: none;
-    font-family: var(--heading-font);
-}
-.fingers a:hover {
-    text-decoration: underline;
-}
+
 /* Now I'll address the main section */
 body { 
     margin: 0;
+    background-color: var(--nav-background-color);
+    color: #ffffff;
 }
 main {
     min-height: 100px;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+
+}
+.gallery img {
+    max-height: 300px;
+    max-width: 80%;
+    margin: 3%;
+}
+.clicknotif {
+    margin-bottom: -100px;
 }
 
 /* And lastly, the footer */
 footer {
-    background-color: var(--green);
     min-height: 100px;
+    background-color: var(--accent1-color);
+    text-align: center;
+}
+
+/* Sike! We're actually going to do the general stuff last. */
+h1, h2, h3, h4, h5 {
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
+}
+a {
+    padding: 5px;
+    color: var(--headline-color-on-color);
+    font-family: var(--heading-font);
+    text-decoration: none;
+}
+
+/* a:hover {
+    background-color: var(--accent2-color);
+} */
+nav a{
+    color: var(--headline-color-on-white);
+    background-color: transparent;
+    border: 0px;
+    border-radius: 5%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 5px;
+    min-inline-size: 0px;
+}
+nav a:hover {
+    text-decoration: underline;
+    background-color: var(--accent3-color);
+}
+p {
+    color: var(--paragraph-color-on-color);
+    font-family: var(--paragraph-font);
+}
+img {
+    border-radius: 10px;
 }
